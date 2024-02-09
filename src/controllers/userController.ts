@@ -6,7 +6,7 @@ import Jwt from "jsonwebtoken";
 import Movies from "../models/Movies";
 import { RequestWithUser } from "../middleware/cutomType";
 import updateCounter from "./counterFun";
-const singIn = async (req: Request, res: Response) => {
+const singUp = async (req: Request, res: Response) => {
   try {
     const { email, password } = req.body;
     const hashedPassword = await bcrypt.hash(password, 10);
@@ -186,7 +186,7 @@ const getWishlistMovies = async (req: RequestWithUser, res: Response) => {
 };
 
 export default {
-  singIn,
+  singUp,
   login,
   moviesList,
   addWishlist,

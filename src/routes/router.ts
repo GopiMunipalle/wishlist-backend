@@ -3,7 +3,7 @@ import express from "express";
 import middleware from "../middleware/middleware";
 const router = express.Router();
 
-router.post("/singIn", userController.singIn);
+router.post("/singUp", userController.singUp);
 router.post("/login", userController.login);
 router.get("/movies", userController.moviesList);
 router.post("/addWishlist", middleware, userController.addWishlist);
